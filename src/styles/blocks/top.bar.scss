@@ -1,0 +1,75 @@
+.top-bar {
+  padding-block: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include on-tablet {
+    padding-block: 64px;
+  }
+
+  @include on-desktop {
+    padding: 40px 0;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+
+    @include on-tablet {
+      gap: 36px;
+    }
+
+    @include on-desktop {
+      gap: 36px;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @include on-desktop {
+      position: absolute;
+      right: 100%;
+      margin-right: 20px;
+      white-space: nowrap;
+
+      color: $main-text-color;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  @include on-desktop {
+    &__icons:has(.icon--phone:hover) {
+      .top-bar__phone {
+        display: block;
+      }
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    width: 130px;
+    height: 38px;
+
+    @include hover(transform, scale(1.2));
+
+    @include on-tablet {
+      width: 187px;
+      height: 56px;
+    }
+
+    @include on-desktop {
+      width: 187px;
+      height: 56px;
+    }
+  }
+}

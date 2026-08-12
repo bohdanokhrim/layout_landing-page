@@ -1,0 +1,82 @@
+.details__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.detail {
+  &__photos {
+    @include page-grid;
+
+    margin-bottom: 16px;
+  }
+
+  &__photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    &--wide {
+      @include on-tablet {
+        grid-column: span 4;
+        aspect-ratio: 2 / 1;
+      }
+
+      @include on-desktop {
+        grid-column: span 8;
+      }
+    }
+
+    &--square {
+      @include on-tablet {
+        grid-column: span 2;
+      }
+
+      @include on-desktop {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__describe {
+    margin: 0;
+  }
+
+  &__button {
+    align-self: center;
+    width: 100%;
+    height: 56px;
+    border: 0;
+    border-radius: 40px;
+    background: #fff;
+    color: #1d1d1d;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+      transform $animation-duration,
+      box-shadow $animation-duration;
+
+    &:hover {
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+
+    @include on-tablet {
+      width: 392px;
+    }
+  }
+}
