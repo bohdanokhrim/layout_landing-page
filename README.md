@@ -16,7 +16,7 @@ MyBike is a responsive landing page for a modern city bike. The website includes
 
 ## Preview
 
-[Live Demo](https://github.com/bohdanokhrim)
+[Live Demo](https://bohdanokhrim.github.io/layout_landing-page/#)
 
 ## Design
 
@@ -26,4 +26,4 @@ MyBike is a responsive landing page for a modern city bike. The website includes
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mate-academy/layout_landing-page/
+   git clone https://github.com/bohdanokhrim/layout_landing-page/
