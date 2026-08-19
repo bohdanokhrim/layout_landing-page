@@ -1,13 +1,20 @@
 .menu {
   box-sizing: border-box;
   height: 100vh;
-  background-color: #c2c2c2;
+  overflow: auto;
+
+  background-color: $background-color-menu;
   font-weight: 700;
   text-transform: uppercase;
-  color: #1d1d1d;
+  color: $main-text-color-dark;
 
   &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
     margin-bottom: 32px;
+    background-color: $background-color-menu;
 
     @include on-tablet {
       margin-bottom: 64px;
@@ -26,6 +33,13 @@
     letter-spacing: 0;
     line-height: 27px;
     margin-bottom: 16px;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform $animation-duration;
+
+    &:hover {
+      transform: scale($hover-scale);
+    }
   }
 
   &__book-a-test-ride {
@@ -36,7 +50,12 @@
     letter-spacing: 2px;
     line-height: 16px;
     padding-bottom: 10px;
-    border-bottom: #1d1d1d solid 1px;
+    border-bottom: $background-color solid 1px;
     width: fit-content;
+    transition: transform $animation-duration;
+
+    &:hover {
+      transform: scale($hover-scale);
+    }
   }
 }

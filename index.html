@@ -56,11 +56,20 @@
               />
             </a>
             <div class="top-bar__icons">
-              <a class="top-bar__phone">+1 234 555-55-55</a>
-              <a
-                href="tel:+1 234 5555-55-55"
-                class="icon icon--phone"
-              ></a>
+              <div class="top-bar__phone-wrapper">
+                <a
+                  class="top-bar__phone"
+                  href="tel:+12345555555"
+                >
+                  +1 234 555-55-55
+                </a>
+
+                <a
+                  href="tel:+12345555555"
+                  class="icon icon--phone"
+                ></a>
+              </div>
+
               <a
                 href="#menu"
                 class="icon icon--burger"
@@ -184,11 +193,13 @@
             <h2 class="section-title">Compare Bikes</h2>
             <div class="compare__products">
               <article class="product compare__product">
-                <img
+                <a href="#" class="product__photo-link">
+                  <img
                   src="./src/images/sporty-4.png"
                   alt="Sporty 4"
                   class="product__photo"
-                />
+                  />
+                </a>
                 <h3 class="product__title">Sporty 4</h3>
                 <p class="product__describe">
                   The iconic frame brought to a new performance height as a
@@ -197,11 +208,13 @@
                 <p class="product__price">$ 2 590</p>
               </article>
               <article class="product compare__product">
-                <img
+                <a href="#" class="product__photo-link">
+                  <img
                   src="./src/images/ride-in-town-st.png"
-                  alt="Ride in town ST"
+                  alt="Sporty 4"
                   class="product__photo"
-                />
+                  />
+                </a>
                 <h3 class="product__title">Ride in town ST</h3>
                 <p class="product__describe">
                   An open frame for an upright riding position as the most
@@ -210,11 +223,13 @@
                 <p class="product__price">$ 2 590</p>
               </article>
               <article class="product compare__product">
-                <img
+                <a href="#" class="product__photo-link">
+                  <img
                   src="./src/images/agile-ride-3.png"
-                  alt="Agile ride 3"
+                  alt="Sporty 4"
                   class="product__photo"
-                />
+                  />
+                </a>
                 <h3 class="product__title">Agile ride 3</h3>
                 <p class="product__describe">
                   The lightweight frame that has earned its street tread as a
@@ -232,17 +247,23 @@
             <div class="details__wrapper">
               <article class="detail">
                 <div class="detail__photos">
-                  <img
-                    class="detail__photo detail__photo--wide"
-                    src="./src/images/details-photo-1.png"
-                    alt="Auto Unlock"
-                  />
 
-                  <img
-                    class="detail__photo detail__photo--square"
-                    src="./src/images/details-photo-2.png"
-                    alt="Auto Unlock"
-                  />
+                  <a href="#" class="detail__photo-link detail__photo-link--wide">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-1-new.png"
+                      alt="Auto Unlock"
+                    />
+                  </a>
+
+                  <a href="#" class="detail__photo-link detail__photo-link--square">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-2.png"
+                      alt="Auto Unlock"
+                    />
+                  </a>
+
                 </div>
                 <h3 class="detail__title">Auto Unlock</h3>
                 <p class="detail__describe">
@@ -253,17 +274,22 @@
               </article>
               <article class="detail">
                 <div class="detail__photos">
-                  <img
-                    class="detail__photo detail__photo--wide"
-                    src="./src/images/details-photo-3.png"
-                    alt="Range & Integrated lights"
-                  />
 
-                  <img
-                    class="detail__photo detail__photo--square"
-                    src="./src/images/details-photo-4.png"
-                    alt="Range & Integrated lights"
-                  />
+                  <a href="#" class="detail__photo-link detail__photo-link--wide">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-3.png"
+                      alt="Range & Integrated lights"
+                    />
+                  </a>
+
+                  <a href="#" class="detail__photo-link detail__photo-link--square">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-4.png"
+                      alt="Range & Integrated lights"
+                    />
+                  </a>
                 </div>
                 <h3 class="detail__title">Range & Integrated lights</h3>
                 <p class="detail__describe">
@@ -275,17 +301,22 @@
 
               <article class="detail">
                 <div class="detail__photos">
-                  <img
-                    class="detail__photo detail__photo--square"
-                    src="./src/images/details-photo-5.png"
-                    alt="Hydraulic disc brakes & Lightweight"
-                  />
 
-                  <img
-                    class="detail__photo detail__photo--wide"
-                    src="./src/images/details-photo-6.png"
-                    alt="Hydraulic disc brakes & Lightweight"
-                  />
+                  <a href="#" class="detail__photo-link detail__photo-link--square">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-5.png"
+                      alt="Hydraulic disc brakes & Lightweight"
+                    />
+                  </a>
+
+                  <a href="#" class="detail__photo-link detail__photo-link--wide">
+                    <img
+                      class="detail__photo"
+                      src="./src/images/details-photo-6.png"
+                      alt="Hydraulic disc brakes & Lightweight"
+                    />
+                  </a>
                 </div>
                 <h3 class="detail__title">
                   Hydraulic disc brakes & Lightweight
@@ -298,12 +329,12 @@
                 </p>
               </article>
 
-              <button
+              <a
                 class="detail__button"
-                type="button"
-              >
+                href="#contacts"
+                >
                 Explore
-              </button>
+              </a>
             </div>
           </section>
           <section
@@ -314,20 +345,25 @@
               <h2 class="contacts__title">Contact us</h2>
 
               <div class="contacts__content">
-                <form class="contacts__form">
+                <form class="contacts__form"
+                      onsubmit="this.reset(); return false;"
+                >
                   <input
                     class="contacts__input"
                     type="text"
-                    placeholder="Name"
+                    placeholder="Elon Musk"
+                    required
                   />
                   <input
                     class="contacts__input"
                     type="email"
-                    placeholder="Email"
+                    placeholder="elon@example.com"
+                    required
                   />
                   <textarea
                     class="contacts__textarea"
-                    placeholder="Message"
+                    placeholder="Your message..."
+                    required
                   ></textarea>
                   <button
                     class="contacts__button"
@@ -341,7 +377,7 @@
                   <div>
                     <p class="contacts__label">Phone</p>
                     <a
-                      class="contacts__link"
+                      class="contacts__link contacts__link--phone"
                       href="tel:+12345555555"
                     >
                       +1 234 5555-55-55
@@ -351,7 +387,7 @@
                   <div>
                     <p class="contacts__label">Email</p>
                     <a
-                      class="contacts__link"
+                      class="contacts__link contacts__link--email"
                       href="mailto:hello@miami.com"
                     >
                       hello@miami.com
@@ -361,8 +397,10 @@
                   <div>
                     <p class="contacts__label">Address</p>
                     <a
-                      class="contacts__link"
-                      href="#"
+                      class="contacts__link contacts__link--address"
+                      href="https://www.google.com/maps/search/?api=1&query=400+N+1st+Ave+Ste+700,+Minneapolis,+MN+55401"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       400 first ave.
                       <br />

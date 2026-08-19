@@ -7,7 +7,7 @@
   }
 
   &:hover &__photo {
-    transform: scale(1.03);
+    transform: scale($hover-scale);
   }
 
   &__title {

@@ -10,44 +10,53 @@
   }
 
   @include on-desktop {
-    padding: 40px;
+    padding: 40px 0;
   }
 
   &__icons {
     display: flex;
     align-items: center;
     gap: 24px;
-    position: relative;
 
     @include on-tablet {
       gap: 36px;
     }
+  }
 
-    @include on-desktop {
-      gap: 36px;
-    }
+  &__phone-wrapper {
+    position: relative;
   }
 
   &__phone {
-    display: none;
+    position: absolute;
+    top: 50%;
+    right: 100%;
 
-    @include on-desktop {
-      position: absolute;
-      right: 100%;
-      margin-right: 20px;
-      white-space: nowrap;
+    padding-right: 20px;
+    transform: translateY(-50%);
 
-      color: $main-text-color;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-    }
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    color: $main-text-color;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+      opacity $animation-duration,
+      visibility $animation-duration;
   }
 
   @include on-desktop {
-    &__icons:has(.icon--phone:hover) {
+    &__phone-wrapper:hover,
+    &__phone-wrapper:focus-within {
       .top-bar__phone {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
     }
   }
@@ -60,14 +69,9 @@
     width: 130px;
     height: 38px;
 
-    @include hover(transform, scale(1.2));
+    @include hover(transform, scale($hover-scale));
 
     @include on-tablet {
-      width: 187px;
-      height: 56px;
-    }
-
-    @include on-desktop {
       width: 187px;
       height: 56px;
     }
